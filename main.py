@@ -1,0 +1,2 @@
+def jajal():
+    return "oke"
