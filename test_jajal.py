@@ -10,4 +10,5 @@ def test_jajal_success():
 def test_jajal_failed():
     result = jajal()
     print(os.getenv("WADIDAW"), "<<<<<<<<< env")
+    print(os.getenv("WATITSUYA"), "<<<<<<<<< eWWW")
     assert result != None
