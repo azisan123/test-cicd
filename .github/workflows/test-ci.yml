@@ -1,0 +1,31 @@
+name: Unit Test on PR
+
+on:
+  pull_request:
+    paths:
+      - "./"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Create ENV File
+        run: |
+          echo "${{ secrets.BE_ENV_TEST }}" > .env.test
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Tests
+        run: |
+          cd backend
+          pytest -s -vv test_jajal.py
