@@ -1,9 +1,6 @@
 name: GitHub Actions Demo 22222
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on:
-  pull_request:
-    paths:
-      - "*"
+on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -24,5 +21,4 @@ jobs:
           pip install -r requirements.txt
       - name: Run Tests
         run: |
-          cd backend
           pytest -s -vv test_jajal.py
