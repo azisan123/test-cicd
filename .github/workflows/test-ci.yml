@@ -12,14 +12,14 @@ jobs:
         with:
           python-version: "3.10"
           cache: "pip"
-
-      - name: Create ENV File
-        run: |
-          echo "${{ secrets.BE_ENV_TEST }}" > .env.test
           
       - name: Read SDK
         run: |
           echo "${{ secrets.FIREBASE_ADMIN_SDK_TEST }}" | base64 -d > "${{ secrets.FIREBASE_ADMIN_SDK_FILENAME_TEST }}"
+
+      - name: Create ENV File
+        run: |
+          echo "${{ secrets.BE_ENV_TEST }}" > .env.test
           
       - name: Install Dependencies
         run: |
