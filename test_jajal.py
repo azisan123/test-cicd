@@ -16,6 +16,9 @@ def test_jajal_failed():
     assert result != None
 
 def test_read_json():
+    for key, value in os.environ.items():
+    print(f'{key}: {value}')
+
     j_file = os.getenv("FIREBASE_ADMIN_SDK_FILENAME_TEST")
     print(os.getenv("FIREBASE_ADMIN_SDK_FILENAME_TEST"), "<<<<<<<<< FIREBASE_ADMIN_SDK_FILENAME_TEST")
     with open(j_file) as f:
