@@ -21,4 +21,4 @@ def test_read_json():
     with open(j_file) as f:
         data = json.load(f)
 
-    print(data), "<<<<<<<<< data FIREBASE_ADMIN_SDK_FILENAME_TEST")
+    print(data, "<<<<<<<<< data FIREBASE_ADMIN_SDK_FILENAME_TEST")
