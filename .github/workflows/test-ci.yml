@@ -13,13 +13,10 @@ jobs:
           python-version: "3.10"
           cache: "pip"
           
-      - name: Read SDK
-        run: |
-          echo "${{ secrets.FIREBASE_ADMIN_SDK_TEST }}" | base64 -d > "${{ secrets.FIREBASE_ADMIN_SDK_FILENAME_TEST }}"
-
       - name: Create ENV File
         run: |
           echo "${{ secrets.BE_ENV_TEST }}" > .env.test
+          echo "${{ secrets.FIREBASE_ADMIN_SDK_TEST }}" | base64 -d > "${{ secrets.FIREBASE_ADMIN_SDK_FILENAME_TEST }}"
           
       - name: Install Dependencies
         run: |
