@@ -21,7 +21,8 @@ def test_read_json():
 
     j_file = os.getenv("FIREBASE_ADMIN_SDK_FILENAME_TEST")
     print(os.getenv("FIREBASE_ADMIN_SDK_FILENAME_TEST"), "<<<<<<<<< FIREBASE_ADMIN_SDK_FILENAME_TEST")
-    with open(j_file) as f:
-        data = json.load(f)
+    print(j_file, " <<<< j_file")
+    with open(j_file, "r") as f:
+        data = f.readlines()
 
     print(data, "<<<<<<<<< data FIREBASE_ADMIN_SDK_FILENAME_TEST")
