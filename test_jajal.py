@@ -17,7 +17,7 @@ def test_jajal_failed():
 
 def test_read_json():
     for key, value in os.environ.items():
-    print(f'{key}: {value}')
+      print(f'{key}: {value}')
 
     j_file = os.getenv("FIREBASE_ADMIN_SDK_FILENAME_TEST")
     print(os.getenv("FIREBASE_ADMIN_SDK_FILENAME_TEST"), "<<<<<<<<< FIREBASE_ADMIN_SDK_FILENAME_TEST")
