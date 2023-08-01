@@ -19,6 +19,10 @@ def test_read_json():
     for key, value in os.environ.items():
       print(f'{key}: {value}')
 
+    print(os.getcwd(), " <<<<< os.getcwd()")
+    print(os.listdir(), " <<<<< listdir")
+
+
     j_file = os.getenv("FIREBASE_ADMIN_SDK_FILENAME_TEST")
     print(os.getenv("FIREBASE_ADMIN_SDK_FILENAME_TEST"), "<<<<<<<<< FIREBASE_ADMIN_SDK_FILENAME_TEST")
     print(j_file, " <<<< j_file")
