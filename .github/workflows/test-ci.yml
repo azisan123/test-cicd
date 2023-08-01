@@ -16,6 +16,9 @@ jobs:
       - name: Create ENV File
         run: |
           echo "${{ secrets.BE_ENV_TEST }}" > .env.test
+          
+      - name: Create SDK File
+        run: |
           echo "${{ secrets.FIREBASE_ADMIN_SDK_TEST }}" > "${{ secrets.FIREBASE_ADMIN_SDK_FILENAME_TEST }}"
           
       - name: Install Dependencies
